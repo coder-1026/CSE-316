@@ -1,2 +1,2 @@
 # CSE-316
-SJF simulation
+SJF simulation based assignment
