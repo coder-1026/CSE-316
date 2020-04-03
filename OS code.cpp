@@ -183,3 +183,79 @@ int  main ()   {
     
     
     
+    for ( ;maintime <= limit ; )   {
+    	
+    	if (!Processes.empty()) {
+		
+         NextShortestJob(maintime);
+       
+    
+    
+}
+
+else {
+	
+
+	++maintime;
+	
+}
+    	
+    	for ( ; o < n ; ++o)  {
+			
+			if (maintime >= at[o])  {	
+			
+			Processes.push_back(pid[o]);
+			
+			Burst.push_back(bt[o]);
+			
+			Arrival.push_back(at[o]);
+				
+			}
+			
+			else break;
+			
+			
+		} 
+		
+    	
+    	maintime+=2;
+    	
+    	
+    	
+    	
+	}
+    
+    
+    cout << endl << endl;
+    
+    cout <<  "ID" << "\t\t" << "Arrival" << "\t\t"<< "Burst" << "\t\t" << "Completion" << "\t\t" << "Turnaround" << "\t\t" << "Waiting" <<endl;
+
+	for (int l = 0 ; l < Processed_pid.size() ; ++l)  {
+		
+		cout <<  Processed_pid.at(l) << "\t\t" << Processed_at.at(l) << "\t\t"<< Processed_bt.at(l) << "\t\t" << Processed_ct.at(l) << "\t\t\t" << (Processed_ct.at(l)-Processed_at.at(l)) << "\t\t\t" << (Processed_ct.at(l) - Processed_at.at(l))-Processed_bt.at(l) <<endl;
+	}
+	
+	for (int q = 0 ; q < Processed_pid.size() ; ++q) {
+		
+		sum1 = sum1 + Processed_ct.at(q);
+		
+		sum2 = sum2 + ((Processed_ct.at(q) - Processed_at.at(q))-Processed_bt.at(q));
+		
+		sum3 = sum3 + (Processed_ct.at(q)-Processed_at.at(q)) ;
+		
+	}
+	
+	cout<<Processed_pid.size();
+	
+	double avg_ct_time = (double) (sum1/Processed_pid.size());
+	
+	double avg_tat_time = (double) (sum3/Processed_pid.size());
+	
+	double avg_wt_time = (double) (sum2/Processed_pid.size())
+	;
+	
+	cout<<"\nAverage Completion Time = "<<avg_ct_time <<"\n\n";
+	cout<<"Average Turnaround Time = "<<avg_tat_time<<"\n\n";
+	cout<<"Average Waiting Time = "<<avg_wt_time<<"\n\n";
+	
+}
