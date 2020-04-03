@@ -41,42 +41,19 @@ void NextShortestJob( int &maintime )  {
 	++i;	
 	
 	}
-	
-	
-	
-	
-	
-	
-
-	
 	maintime = maintime + Burst.at(pos);  // 2 time unit for delay
-	
-	
 	Processed_pid.push_back(Processes.at(pos));
 	Processed_bt.push_back(Burst.at(pos));
 	Processed_at.push_back(Arrival.at(pos));
 	Processed_ct.push_back(maintime);
 
-	
-	
-
-	
-	
-
-	
 //	cout << 'P'<<list.at(pos) << '|';
 
 	
- 
-	Processes.erase(Processes.begin() + pos );
+        Processes.erase(Processes.begin() + pos );
 	Burst.erase(Burst.begin() + pos );
 	Arrival.erase(Arrival.begin() +pos);
 	
-
-
-
-
-
 }
 
 
@@ -153,12 +130,6 @@ int  main ()   {
 		}
     		
 	}
-    
-    
-    
-    
-    
-
     
     Processes.push_back(pid[0]);
     Arrival.push_back(at[0]);
