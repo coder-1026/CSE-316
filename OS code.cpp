@@ -219,8 +219,4 @@ else {
 	double avg_wt_time = (double) (sum2/Processed_pid.size())
 	;
 	
-	cout<<"\nAverage Completion Time = "<<avg_ct_time <<"\n\n";
-	cout<<"Average Turnaround Time = "<<avg_tat_time<<"\n\n";
-	cout<<"Average Waiting Time = "<<avg_wt_time<<"\n\n";
 	
-}
