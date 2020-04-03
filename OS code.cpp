@@ -2,9 +2,7 @@
 #include <vector>
 #include <conio.h>
 #include <iomanip>
-
 using namespace std;
-
 void swap(int &a , int &b)  {
 	
 	
@@ -15,15 +13,11 @@ void swap(int &a , int &b)  {
 	b = temp;
 	
 }
-
 int n ;
-
 vector<int>Processed_pid ,Processed_at ,Processed_bt , Processed_ct;
-
 vector<int> Processes;
 vector<int>Burst;
 vector<int>Arrival;
-    
 void NextShortestJob( int &maintime )  {
 	
 	
@@ -172,7 +166,7 @@ int  main ()   {
 	
 
     
-    //  5 1 10 1 2 4 4 3 7 7 4 2 3 5 1 2
+    ////  5 1 10 1 2 4 4 3 7 7 4 2 3 5 1 2  ////
     
     
  
