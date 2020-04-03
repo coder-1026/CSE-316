@@ -1,2 +1,2 @@
 # CSE-316
-sjf simulation
+SJF simulation
