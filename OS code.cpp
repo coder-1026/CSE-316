@@ -62,12 +62,12 @@ int  main ()   {
 	
 	double sum1,sum2,sum3;
 	
-	cout<<"Enter no. of Processes : ";
+	cout<<"Please Enter number of processes : ";
 	
 
 	
 	cin >> n;
-	
+	cout<<"\n\n--------------------------------------------------------------------------------";
 	
     int pid[n] , sorted_pid[n];
     
@@ -85,18 +85,18 @@ int  main ()   {
     
     for (int i = 0 ; i < n ; ++i)   {
     	
-    	cout << "\n\n\nEnter Pid : ";
+    	cout << "\n\n\nPlease Enter given Process no. : ";
     	
     	cin >> pid[i];
     	
-    	cout << "\nEnter Arival time : ";
+    	cout << "\nPlease Enter Corresponding Arival time : ";
     	
     	cin >> at[i];
     	
-    	cout << "\nEnter Burst time : ";
+    	cout << "\nPlease Enter Corresponding Burst time : ";
     	
     	cin >> bt[i];
-    	
+    	cout<<"\n\n--------------------------------------------------------------------------------";
     	limit += bt[i];
     	
     	BT[i] = bt[i];
@@ -193,7 +193,7 @@ else {
     
     cout << endl << endl;
     
-    cout <<  "ID" << "\t\t" << "Arrival" << "\t\t"<< "Burst" << "\t\t" << "Completion" << "\t\t" << "Turnaround" << "\t\t" << "Waiting" <<endl;
+    cout <<  "ID" << "\t\t" << "Arrival" << "\t\t"<< "Burst" << "\t\t" << "Completion" << "\t\t" << "Turnarou" << "\t\t" << "Waiting" <<endl;
 
 	for (int l = 0 ; l < Processed_pid.size() ; ++l)  {
 		
@@ -219,4 +219,8 @@ else {
 	double avg_wt_time = (double) (sum2/Processed_pid.size())
 	;
 	
+	cout<<"\nConcluded Avg Completion Time = \n"<<avg_ct_time <<"\n\n";
+	cout<<"Concluded Avg Turnaround Time = \n"<<avg_tat_time<<"\n\n";
+	cout<<"Concluded Avg Waiting Time = \n"<<avg_wt_time<<"\n\n";
 	
+}
